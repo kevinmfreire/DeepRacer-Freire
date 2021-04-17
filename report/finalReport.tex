@@ -17,15 +17,13 @@ The group members are Walter Freire and Kevin Freire and the project topic we wi
 \end{abstract}
 
 \section{Intorduction}
-Reinforcement Learning (RL) has been used to accomplish various robotic tasks such as manipulation, navigation, flight, interaction, motion planning and many more. When implementing an RL model into the real world, due to its high sample complexity, safety requirements and cost it is common to train the RL agent in a simulation. In Autonomous driving, RL require many disciplines and equipment such as access to a physical robot/car with proper sensors, an accurate robot model for simulation to avoid damaging expensive hardware in initial development, a diverse training mechanism and custom modification of the training procedure such as modifying the neural network architecture and the loss function [1]. For our experiment we used Deepracer as a guideline to implement and modify an existing jupyter notebook using AWS Sagemaker and Robomaker APIs.
+Reinforcement Learning (RL) has been used to accomplish various robotic tasks such as manipulation, navigation, flight, interaction, motion planning and many more. When implementing an RL model into the real world, due to its high sample complexity, safety requirements and cost it is common to train the RL agent in a simulation. In Autonomous driving, RL require many disciplines and equipment such as access to a physical robot/car with proper sensors, an accurate robot model for simulation to avoid damaging expensive hardware in initial development, a diverse training mechanism and custom modification of the training procedure such as modifying the neural network architecture and the loss function \cite{9197465}. For our experiment we used Deepracer as a guideline to implement and modify an existing jupyter notebook using AWS Sagemaker and Robomaker APIs.
 
-We decided to get started with Deepracer because it supports state-of-the-art deep RL algorithms [29], simulations with OpenAI Gym interface [17], distributed rollouts and integration with cloud services. DeepRacer uses a 1/18th scale car of a physical robot that uses RL for navigation of a race track with a fisheye lens camera [1] with other specs such as GPU, live streaming view and more. In this paper the robot model in DeepRacers simulation is used along with the multiple provided race tracks. With the provided sources the RL model policy is trained with different simulation parameters and multiple tracks in parallel using distributed rollouts.
+We decided to get started with Deepracer because it supports state-of-the-art deep RL algorithms \cite{caspi10reinforcement}, simulations with OpenAI Gym interface \cite{brockman2016openai}, distributed rollouts and integration with cloud services. DeepRacer uses a 1/18th scale car of a physical robot that uses RL for navigation of a race track with a fisheye lens camera \cite{9197465} with other specs such as GPU, live streaming view and more. In this paper the robot model in DeepRacers simulation is used along with the multiple provided race tracks. With the provided sources the RL model policy is trained with different simulation parameters and multiple tracks in parallel using distributed rollouts.
 
-DeepRacer is a great platform for learning an end-to-end policy for navigating through a race track, that uses a single grayscale camera image as observation and discretized throttle/steering ad actions. The training is done in simulation using Proximal Policy Optimization (PPO) algorithm [31], which can converge in under 5 minutes and about 5000 simulation steps.
- Deepracer provides an interactive experience in training a vehicle to drive itself through a race track with minimal supervision. We were mainly interested in the available jail-broken version in order to modify their source code to implement our own network architecture, customize the action-space, the reward functions and much more.  This is because Deepracer was very limited to what we can do and were restricted to their built in architectures. For this paper we implemented a simulation using AWS Robomaker and Training Deep reinforcement algorithm using The Sagemaker API to build a custom deep architecture and custom reward function in a built simulation environment built by AWS.  
+DeepRacer is a great platform for learning an end-to-end policy for navigating through a race track, that uses a single grayscale camera image as observation and discretized throttle/steering ad actions. The training is done in simulation using Proximal Policy Optimization (PPO) algorithm \cite{schulman2017proximal}, which can converge in under 5 minutes and about 5000 simulation steps. Deepracer provides an interactive experience in training a vehicle to drive itself through a race track with minimal supervision. We were mainly interested in the available jail-broken version in order to modify their source code to implement our own network architecture, customize the action-space, the reward functions and much more.  This is because Deepracer was very limited to what we can do and were restricted to their built in architectures. For this paper we implemented a simulation using AWS Robomaker and Training Deep reinforcement algorithm using The Sagemaker API to build a custom deep architecture and custom reward function in a built simulation environment built by AWS.  
 
-The purpose of selecting this project was to learn and understand the effect of training a vehicle with RL using deep neural networks with large datasets of videos that require high computational power using the Clipped PPO algorithm and customized reward function.  [From result based on kevin paper] States that deeper networks reduce training time in self driving vehicles.  This is an observation we will attempt to capture in our project.
- The rest of the report consists of the problem statement along with the environment we used, the custom deep architecture and reward function, the reinforcement algorithm, experiment setup , results, discussion of results.  Finally we will be showing code snippets in our appendix with custom code but the full implementation will be available on Github.
+The purpose of selecting this project was to learn and understand the effect of training a vehicle with RL using deep neural networks with large datasets of videos that require high computational power using the Clipped PPO algorithm and customized reward function.  \cite{7830823} States that deeper networks reduce training time in self driving vehicles.  This is an observation we will attempt to capture in our project.  The rest of the report consists of the problem statement along with the environment we used, the custom deep architecture and reward function, the reinforcement algorithm, experiment setup , results, discussion of results.  Finally we will be showing code snippets in our appendix with custom code but the full implementation will be available on Github.
 
 
 \section{Problem Statement and Environement/Dataset}
@@ -123,12 +121,12 @@ The reward function that we used for all the tests are based on several consider
 \subsection{Reinforcement Algorithm}
 Proximal Policy optimization (PPO) is currently a standard use in self driving vehicles.  AWS provided two algorithms: the Soft Actor Critic (SAC) Algorithm and Clipped PPO algorithm.  We decided to go with CPPO because we wanted to use an algorithm that's popular in self driving vehicles, and for its on-policy learning algorithm which is done by PPO.  On-policy algorithms tend to be more stable and exploit exploration which is why we decided to train it using the Clipped PPO algorithm.  We did not do any modification to the algorithm but rather just used the API which was implemented by intel RL Coach framework used within AWS Sagemaker.
 
-\subsection{Hyper Parameters}
+\subsection{Hyperparameters}
 As mentioned above we did not want to focus on fine tuning the model because it was too costly using AWS resources. We focus on two sets of hyper parameters for our tests in order to observe which is better.  Shown in Table \ref{hyper-parameters} are the hyper parameters used for the experiments.
 
 \begin{table}
 \centering
-\caption{Hyper Parameters used for training}
+\caption{Hyperparameters used for training}
 \begin{tabular}{ | m{4cm} | m{4em}| m{4em} | } 
 \hline
 \textbf{CPPO Hyper Parameters} & \textbf{Set 1} & \textbf{Set 2} \\ 
@@ -152,7 +150,7 @@ Loss type & Huber & Huber \\
 \# of episode between training & 20 & 20 \\ 
 \hline
 \end{tabular}
-\label{hyper-parameters}
+\label{Hyperparameters}
 \end{table}
 
 \subsection{Testing Metrics}
@@ -162,17 +160,140 @@ Finally for the training metrics we wanted to observe some important information
 Since we wanted to test the effect of training a deep network using reinforcement learning we needed to test and compare against another architecture.  AWS provided a built in architecture which we used to start our test that used a shallow architecture which only consists of 3 convolutional layers and no dense layers. The convolutional layers where the first layer has 32 filters using 8$\times$8 filter and stride of 4 followed by a ReLU activation function.  The second layer has 64 filters using 4$\times$4 fitler and stride 2 followed by a ReLU function and finally the third layer has 64 filters again using 3$\times$3 filter and stride of 1.  We ran the same test we ran in our architecture in order to compare results fairly.  As mentioned earlier, the object is to observe if a deeper network can reduce training time in self driving vehicles.
 
 \section{Results and Discussion}
-For our initial set of results we wanted to test the effect of using different hyper parameters , so we trained it using two sets of hyper parameters.  In our case set 1 did better with a faster time and less times off track using both the architectures.  So for the rest of the tests we decided to use the set 1 hyper parameters.
+For our initial set of results we wanted to test the effect of using different hyper parameters, so we trained it using two sets of hyper parameters as shown in Table \ref{twoHyperSets}.  In our case set 1 did better with a faster time and less times off track using both the architectures.  So for the rest of the tests we decided to use the set 1 hyper parameters.
+
+\begin{table}
+\centering
+\caption{Training using two sets of hyperparameters}
+\begin{tabular}{ |p{4cm}||p{2cm}|p{2cm}|  }
+\hline
+Architecture & Deep Network & Shallow Network \\
+\hline
+ \multicolumn{1}{|c||}{} & \multicolumn{2}{|c|}{Hyperparameter set 1} \\
+\hline
+\# trials & 5  & 5 \\
+ Complete \% &  100 & 100 \\
+Average Elapse time (s) & 15.034 & 15.255\\
+ Off track count  & $\leq$4 & $\leq$1 \\
+\hline
+ \multicolumn{1}{|c||}{} & \multicolumn{2}{|c|}{Hyperparameter set 2} \\
+\hline
+\# trials & 5  & 5 \\
+ Complete \% &  100 & 100 \\
+Average Elapse time (s) & 16.592 & 17.207\\
+ Off track count  & $\leq$10 & $\leq$10 \\
+ \hline
+\end{tabular}
+\label{twoHyperSets}
+\end{table}
+
+Our main goal for this project was to identify the effect of training a self driving vehicle using a deep architecture that we implemented and compare it to a shallow architecture provided by AWS.  As shown in Table \ref{mainTest} we performed the 3 training jobs and each architecture was trained for 1 , 4 and 8 hours. 
+
+\begin{table*}[t]
+\centering
+\caption{Training comparison}
+\begin{tabular}{ |p{1cm}|p{1cm}|p{1.2cm}|p{1cm}|p{1cm}|p{1cm}|p{1.2cm}|p{1cm}|p{1cm}| }
+\hline
+ \multicolumn{1}{|c|}{} & \multicolumn{4}{|c|}{Deep Network} & \multicolumn{4}{|c|}{Shallow Network} \\
+\hline
+ & Trial &Complete & Elapse Time & Off Track &  Trial &Complete & Elapse Time & Off Track  \\
+\hline
+\multirow{5}{4em}{1H} & 1 &  100\% & 54.995 & 1 & 1 &  100\% & 22.697 & 0 \\ 
+& 2 &  100\% & 51.508 & 1 & 2 &  100\% & 21.311 & 1  \\ 
+& 3 &  100\% & 56.982 & 2 & 3 &  100\% & 20.537 & 0  \\
+& 4 &  100\% & 59.805 & 3 & 4 &  100\% & 20.359 & 0  \\ 
+& 5 &  100\% & 53.618 & 3 & 5 &  100\% & 21.320 & 0  \\
+ \hline
+\multirow{5}{4em}{4H} & 1 &  100\% & 14.799 & 2 & 1 &  100\% & 15.304 & 0 \\ 
+& 2 &  100\% & 16.017 & 4 & 2 &  100\% & 15.986 & 0  \\ 
+& 3 &  100\% & 15.167 & 2 & 3 &  100\% & 14.392 & 0  \\
+& 4 &  100\% & 14.060 & 2 & 4 &  100\% & 15.071 & 1  \\ 
+& 5 &  100\% & 15.125 & 3 & 5 &  100\% & 15.521 & 0  \\
+ \hline
+\multirow{5}{4em}{8H} & 1 &  100\% & 14.799 & 2 & 1 &  100\% & 15.304 & 0 \\ 
+& 2 &  100\% & 16.017 & 4 & 2 &  100\% & 15.986 & 0  \\ 
+& 3 &  100\% & 15.167 & 2 & 3 &  100\% & 14.392 & 0  \\
+& 4 &  100\% & 14.060 & 2 & 4 &  100\% & 15.071 & 1  \\ 
+& 5 &  100\% & 15.125 & 3 & 5 &  100\% & 15.521 & 0  \\
+ \hline
+\end{tabular}
+\label{mainTest}
+\end{table*}
+
+Lookin at the results you can see that the 1 hour test for both cases took a long time to complete the track.  Our deep network took 50+ seconds to complete it while the shallow network only took 20+ seconds.  It is clear to see that when you only train for 1 hour a shallow network performs better.  So we proceeded to experiment again for 4 hours and observed that our initial objective was starting to show.  The deep and the shallow network have around the same time to complete the track.  This test demonstrates that in 4 hours a deeper network was able to achieve the same results as shallow.  The deeper network improved by 73\% with an additional 3 hours of training while the shallow network only improved by 28\%.  
+
+[need to add final results here]
+
+[Also add results of different race track here]
+
+Looking at the results in Table ADD REF we see that the deeper network tends to train faster and improve overall results of a self driving race car.  This has some conditions as you can see because a deep network does not perform as well with only 1 hour of training like the shallow architecture did.  As soon as the training time surpassed 4 hours of training that's when we saw that the deep architecture started surpassing performance of shallow networks.  
+
+[talk about different racetrack here]
+
+This project has much research to continue on such as discovering what are the best hyper parameters for a deep network.  We also would like to identify what else is affected by deeper networks such as overfitting certain race tracks.  There are other tests we would've liked to implement such as the activation functions that we used in between all our layers.  We used ReLU but what would have happened if we used TANH or other functions?  Using deep networks is a popular solution to self driving cars but there are so many areas of improvement and fine tuning in order to obtain faster and better results.  We saw first hand the cost of just training these basic networks and the time we spent in figuring out the best models.
+
+
 
 \section{Implementation and Code}
 As mentioned throughout the paper we used Amazons’s Sagemaker API and python’s python development environment.  Sagemaker Library used the RL Coach from Intel for the reinforcement learning Algorithms.  The code is available on github along with our modification of the code we implemented.  The github repo is available at \emph{https://github.com/wfrei020/DeepRacer-Freire}, please read the README file.  For the simulation, amazon used robomaker and we implemented it and ran using a GPU.  The original notebook provided by AWS for Deepracer was outdated and we spent a lot of effort and time upgrading it to the newest version.  The notebook was available at https://github.com/aws/amazon-sagemaker-examples and we upgraded it using the help of issue number 2055.  This helped us upgrade a lot of the packages.  Finally we also had to make the notebook compatible for CPPO.  THe notebook that AWS provided only worked for the SAC algorithm.  We really wanted to work with CPPO so we spent several days debugging and adding some code fix to allow the use of CPPO.  In the Appendix we have some important code we implemented for our project but we will not be including all the fixes throughout the API as it is too much and not important to the project. Finally in general we used AWS Dockers, Robomaker, Sagemaker ML libraries, and S3 bucket for storing our models. 
 
-\section{References}
-Please make sure you cite any sources you have used to complete the project
+\section{Conclusion}
+In conclusion we have shown the effect of training a deep network for self driving race cars.  The effect shows that deeper networks achieve faster results with less training.  This has some condition though because with training time of less than 1 hour shallow networks perform better.  Increased training time for more than 4 hours is when the deep networks start surpassing the shallow networks.  We also looked at some effects of tuning hyperparameters and saw that changing them a little bit had a big effect on overall results.  We hope to continue working on this since AWS provides monthly race competition around the world to test our models and see who implements the fastest self driving race car.
 
-[1] DeepRacer Article
-[29] Deep racer reference 29
-[17] Deep racer reference 17
-[31] Deep racer reference 31
+\bibliography{finalreport}
+\bibliographystyle{ieeetr}
+
+\newpage
+
+\section{Appendix}
+
+\subsection{RewardFunciton}
+import math\\
+def reward$\_$function(params):\\
+  \#Read input parameters\\
+    all$\_$wheels$\_$on$\_$track = params['all$\_$wheels$\_$on$\_$track']  \\
+    distance$\_$from$\_$center = params['distance$\_$from$\_$center']  \\
+    crashed = params['is$\_$crashed']  \\
+    progress = params['progress']  \\
+    offtrack = params['is$\_$offtrack']  \\
+    track$\_$width = params['track$\_$width'] \\
+    speed = params['speed'] \\
+    steps = params['steps'] \\
+    steering = params['steering$\_$angle']  \\
+    left$\_$of$\_$center = params['is$\_$left$\_$of$\_$center']  \\
+
+  TOTAL$\_$NUM$\_$STEPS = 300\\
+    if crashed and offtrack:\\
+        reward = -1.0\\
+        return float(reward)\\
+
+\#If agent is on the left lane and all wheel are not on track and steering angle is to the left penalize\\
+    if not all$\_$wheels$\_$on$\_$track and left$\_$of$\_$center and steering $>$ 0:\\
+        reward = -1.0\\
+        return float(reward)\\
+    \# If agent is on the right lane and all wheel are onot on track and steering angle is to the right penalize\\
+    if not all$\_$wheels$\_$on$\_$track and not left$\_$of$\_$center and steering $<$ 0:\\
+        reward = -1.0\\
+        return float(reward)\\
+    		\# Give a very low reward by default\\
+    		reward = 1e-3\\
+    		
+\# give reward for proper steering\\
+    if not all$\_$wheels$\_$on$\_$track and left$\_$of$\_$center and steering $<$ 0:\\
+        reward += 2 * math.sin(math.radians(-steering))\\
+
+    if not all$\_$wheels$\_$on$\_$track and not left$\_$of$\_$center and steering $>$ 0:\\
+        reward += 2 * math.sin(math.radians(steering))\\
+\#Give a high reward if no wheels go off the track and\\
+\#the agent is somewhere in between the track borders\\
+    if all$\_$wheels$\_$on$\_$track and (0.5 * track$\_$width - distance$\_$from$\_$center) $\geq$ 0.05:\\
+        reward += 1.0\\
+        reward += 2**speed\\
+    else:\\
+        reward += 2**(speed**(1 / 2))\\
+
+if (steps\%100) == 0 and progress $>$ (steps/TOTAL$\_$NUM$\_$STEPS)*100:\\
+        reward += 10.0\\
+    return float(reward)\\
 
 \end{document}
