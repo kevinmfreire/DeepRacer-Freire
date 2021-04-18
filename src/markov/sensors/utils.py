@@ -1,6 +1,5 @@
 '''This module houses all utility methods for the sensor module'''
 import numpy as np
-
 from markov.environments.constants import TRAINING_IMAGE_SIZE, TRAINING_LIDAR_SIZE, SECTOR_LIDAR_CLIPPING_DIST
 from markov.architecture.constants import SchemeInfo, Input, ActivationFunctions, NeuralNetwork
 from markov.log_handler.deepracer_exceptions import GenericError
@@ -48,7 +47,6 @@ def get_front_camera_embedders(network_type):
     '''
     if not isinstance(network_type, str):
         raise GenericError("None string type for network type: {}".format(type(network_type)))
-
     input_embedder = dict()
     if network_type == NeuralNetwork.DEEP_CONVOLUTIONAL_NETWORK_SHALLOW.value:
         input_embedder = {Input.CAMERA.value:
@@ -81,14 +79,13 @@ def get_front_camera_embedders(network_type):
                            SchemeInfo.IS_FIRST_LAYER_BN.value: False}}
     elif network_type == NeuralNetwork.DEEP_CONVOLUTIONAL_NETWORK_FREIRE.value:
         input_embedder = {Input.CAMERA.value:
-                          {SchemeInfo.CONV_INFO_LIST.value: [[32, 8, 4], [32, 4, 2],
-                                                             [64, 4, 2], [64, 3, 1],
-                                                             [128, 3, 2], [128, 3, 1]],
-                           SchemeInfo.DENSE_LAYER_INFO_LIST.value: [1024, 1024],
+                          {SchemeInfo.CONV_INFO_LIST.value: [[32, 5, 2], [32, 3, 1], [64, 3, 2],[64, 3, 1],
+                                                            [128, 3, 2], [128, 3, 1], [256, 3, 1],[256, 3, 1]],
+                           SchemeInfo.DENSE_LAYER_INFO_LIST.value: [512, 512],
                            SchemeInfo.BN_INFO_CONV.value: [True, ActivationFunctions.RELU.value,
                                                            0.0],
                            SchemeInfo.BN_INFO_DENSE.value: [False, ActivationFunctions.RELU.value,
-                                                            0.5],
+                                                            0.0],
                            SchemeInfo.IS_FIRST_LAYER_BN.value: False}}
     else:
         raise Exception("Camera sensor has no embedder for topology {}".format(network_type))

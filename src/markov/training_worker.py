@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import shutil
 import argparse
@@ -100,6 +101,7 @@ def training_worker(graph_manager, task_parameters, user_batch_size,
 
                     # TODO: Refactor the flow to remove conditional checks for specific algorithms
                     # DH: for SAC, check if experience replay memory has enough transitions
+                    logger.info("setting trainig algorithm");
                     if training_algorithm == TrainingAlgorithm.SAC.value:
                         replay_mem_size = min([agent.memory.num_transitions()
                                                for level in graph_manager.level_managers
@@ -107,6 +109,7 @@ def training_worker(graph_manager, task_parameters, user_batch_size,
                         episode_batch_size = user_batch_size if replay_mem_size > user_batch_size \
                             else 2**math.floor(math.log(min(rollout_steps.values()), 2))
                     else:
+                        logger.info("it is CPPO");
                         episode_batch_size = user_batch_size if min(rollout_steps.values()) > user_batch_size else 2**math.floor(math.log(min(rollout_steps.values()), 2))
                     # Set the batch size to the closest power of 2 such that we have at least two batches, this prevents coach from crashing
                     # as  batch size less than 2 causes the batch list to become a scalar which causes an exception
