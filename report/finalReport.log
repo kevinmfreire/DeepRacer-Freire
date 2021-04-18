@@ -1,36 +1,35 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.15)  17 APR 2021 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  18 APR 2021 14:31
 entering extended mode
-**C:/Users/kevin/Documents/Masters/Reinforcement-Learning/Project/DeepRacer-Fre
-ire/report/finalReport.tex
-
-(C:/Users/kevin/Documents/Masters/Reinforcement-Learning/Project/DeepRacer-Frei
-re/report/finalReport.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18>
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ieeetran\IEEEtran.c
-ls
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**finalReport.tex
+(./finalReport.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
-\@IEEEtrantmpdimenA=\dimen138
-\@IEEEtrantmpdimenB=\dimen139
-\@IEEEtrantmpdimenC=\dimen140
-\@IEEEtrantmpcountA=\count179
-\@IEEEtrantmpcountB=\count180
-\@IEEEtrantmpcountC=\count181
+\@IEEEtrantmpdimenA=\dimen134
+\@IEEEtrantmpdimenB=\dimen135
+\@IEEEtrantmpdimenC=\dimen136
+\@IEEEtrantmpcountA=\count167
+\@IEEEtrantmpcountB=\count168
+\@IEEEtrantmpcountC=\count169
 \@IEEEtrantmptoksA=\toks15
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
 03.
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
-\@IEEEnormalsizeunitybaselineskip=\dimen141
+\@IEEEnormalsizeunitybaselineskip=\dimen137
 -- This is a 10 point document.
-\CLASSINFOnormalsizebaselineskip=\dimen142
-\CLASSINFOnormalsizeunitybaselineskip=\dimen143
-\IEEEnormaljot=\dimen144
+\CLASSINFOnormalsizebaselineskip=\dimen138
+\CLASSINFOnormalsizeunitybaselineskip=\dimen139
+\IEEEnormaljot=\dimen140
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
@@ -81,178 +80,176 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
-\IEEEquantizedlength=\dimen145
-\IEEEquantizedlengthdiff=\dimen146
-\IEEEquantizedtextheightdiff=\dimen147
-\IEEEilabelindentA=\dimen148
-\IEEEilabelindentB=\dimen149
-\IEEEilabelindent=\dimen150
-\IEEEelabelindent=\dimen151
-\IEEEdlabelindent=\dimen152
-\IEEElabelindent=\dimen153
-\IEEEiednormlabelsep=\dimen154
-\IEEEiedmathlabelsep=\dimen155
+\IEEEquantizedlength=\dimen141
+\IEEEquantizedlengthdiff=\dimen142
+\IEEEquantizedtextheightdiff=\dimen143
+\IEEEilabelindentA=\dimen144
+\IEEEilabelindentB=\dimen145
+\IEEEilabelindent=\dimen146
+\IEEEelabelindent=\dimen147
+\IEEEdlabelindent=\dimen148
+\IEEElabelindent=\dimen149
+\IEEEiednormlabelsep=\dimen150
+\IEEEiedmathlabelsep=\dimen151
 \IEEEiedtopsep=\skip47
-\c@section=\count182
-\c@subsection=\count183
-\c@subsubsection=\count184
-\c@paragraph=\count185
-\c@IEEEsubequation=\count186
+\c@section=\count170
+\c@subsection=\count171
+\c@subsubsection=\count172
+\c@paragraph=\count173
+\c@IEEEsubequation=\count174
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
-\c@figure=\count187
-\c@table=\count188
-\@IEEEeqnnumcols=\count189
-\@IEEEeqncolcnt=\count190
-\@IEEEsubeqnnumrollback=\count191
-\@IEEEquantizeheightA=\dimen156
-\@IEEEquantizeheightB=\dimen157
-\@IEEEquantizeheightC=\dimen158
-\@IEEEquantizeprevdepth=\dimen159
-\@IEEEquantizemultiple=\count192
-\@IEEEquantizeboxA=\box47
-\@IEEEtmpitemindent=\dimen160
-\IEEEPARstartletwidth=\dimen161
-\c@IEEEbiography=\count193
-\@IEEEtranrubishbin=\box48
-) (C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epsf\epsf.sty
+\c@figure=\count175
+\c@table=\count176
+\@IEEEeqnnumcols=\count177
+\@IEEEeqncolcnt=\count178
+\@IEEEsubeqnnumrollback=\count179
+\@IEEEquantizeheightA=\dimen152
+\@IEEEquantizeheightB=\dimen153
+\@IEEEquantizeheightC=\dimen154
+\@IEEEquantizeprevdepth=\dimen155
+\@IEEEquantizemultiple=\count180
+\@IEEEquantizeboxA=\box45
+\@IEEEtmpitemindent=\dimen156
+\IEEEPARstartletwidth=\dimen157
+\c@IEEEbiography=\count181
+\@IEEEtranrubishbin=\box46
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/epsf/epsf.sty
 This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsffilein=\read2
-\epsfframemargin=\dimen162
-\epsfframethickness=\dimen163
-\epsfrsize=\dimen164
-\epsftmp=\dimen165
-\epsftsize=\dimen166
-\epsfxsize=\dimen167
-\epsfysize=\dimen168
-\pspoints=\dimen169
-) (C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cite\cite.sty
+\epsfframemargin=\dimen158
+\epsfframethickness=\dimen159
+\epsfrsize=\dimen160
+\epsftmp=\dimen161
+\epsftsize=\dimen162
+\epsfxsize=\dimen163
+\epsfysize=\dimen164
+\pspoints=\dimen165
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip50
-For additional information on amsmath, use the `?' option.
 
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
-\ex@=\dimen170
+\ex@=\dimen166
 ))
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen171
-) (C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
-y
+\pmbraise@=\dimen167
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count194
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count195
-\leftroot@=\count196
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count197
-\DOTSCASE@=\count198
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box49
-\strutbox@=\box50
-\big@size=\dimen172
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count199
-\c@MaxMatrixCols=\count266
+\inf@bad=\count182
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count183
+\leftroot@=\count184
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count185
+\DOTSCASE@=\count186
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen168
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count187
+\c@MaxMatrixCols=\count188
 \dotsspace@=\muskip16
-\c@parentequation=\count267
-\dspbrk@lvl=\count268
+\c@parentequation=\count189
+\dspbrk@lvl=\count190
 \tag@help=\toks17
-\row@=\count269
-\column@=\count270
-\maxfields@=\count271
+\row@=\count191
+\column@=\count192
+\maxfields@=\count193
 \andhelp@=\toks18
-\eqnshift@=\dimen173
-\alignsep@=\dimen174
-\tagshift@=\dimen175
-\tagwidth@=\dimen176
-\totwidth@=\dimen177
-\lineht@=\dimen178
+\eqnshift@=\dimen169
+\alignsep@=\dimen170
+\tagshift@=\dimen171
+\tagwidth@=\dimen172
+\totwidth@=\dimen173
+\lineht@=\dimen174
 \@envbody=\toks19
 \multlinegap=\skip51
 \multlinetaggap=\skip52
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amscd.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
 \athelp@=\toks21
-\minaw@=\dimen179
-\bigaw@=\dimen180
-\minCDarrowwidth=\dimen181
+\minaw@=\dimen175
+\bigaw@=\dimen176
+\minCDarrowwidth=\dimen177
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
-ty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
-cs.cfg
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
-.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
-ty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-\Gin@req@height=\dimen182
-\Gin@req@width=\dimen183
+\Gin@req@height=\dimen178
+\Gin@req@width=\dimen179
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\latexsym.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\multico
-l.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count272
-\mult@box=\box51
-\multicol@leftmargin=\dimen184
-\c@unbalance=\count273
-\c@collectmore=\count274
-\doublecol@number=\count275
-\multicoltolerance=\count276
-\multicolpretolerance=\count277
-\full@width=\dimen185
-\page@free=\dimen186
-\premulticols=\dimen187
-\postmulticols=\dimen188
+\c@tracingmulticols=\count194
+\mult@box=\box49
+\multicol@leftmargin=\dimen180
+\c@unbalance=\count195
+\c@collectmore=\count196
+\doublecol@number=\count197
+\multicoltolerance=\count198
+\multicolpretolerance=\count199
+\full@width=\dimen181
+\page@free=\dimen182
+\premulticols=\dimen183
+\postmulticols=\dimen184
 \multicolsep=\skip53
 \multicolbaselineskip=\skip54
-\partial@page=\box52
-\last@line=\box53
-\maxbalancingoverflow=\dimen189
-\mult@rightbox=\box54
-\mult@grightbox=\box55
-\mult@gfirstbox=\box56
-\mult@firstbox=\box57
+\partial@page=\box50
+\last@line=\box51
+\maxbalancingoverflow=\dimen185
+\mult@rightbox=\box52
+\mult@grightbox=\box53
+\mult@gfirstbox=\box54
+\mult@firstbox=\box55
+\@tempa=\box56
+\@tempa=\box57
 \@tempa=\box58
 \@tempa=\box59
 \@tempa=\box60
@@ -288,24 +285,20 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box90
 \@tempa=\box91
 \@tempa=\box92
-\@tempa=\box93
-\@tempa=\box94
-\c@minrows=\count278
-\c@columnbadness=\count279
-\c@finalcolumnbadness=\count280
-\last@try=\dimen190
-\multicolovershoot=\dimen191
-\multicolundershoot=\dimen192
-\mult@nat@firstbox=\box95
-\colbreak@box=\box96
-\mc@col@check@num=\count281
+\c@minrows=\count266
+\c@columnbadness=\count267
+\c@finalcolumnbadness=\count268
+\last@try=\dimen186
+\multicolovershoot=\dimen187
+\multicolundershoot=\dimen188
+\mult@nat@firstbox=\box93
+\colbreak@box=\box94
+\mc@col@check@num=\count269
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.s
-ty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
-ty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
@@ -313,12 +306,11 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
-y
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks23
 \thm@bodyfont=\toks24
 \thm@headfont=\toks25
@@ -329,58 +321,52 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip57
 \dth@everypar=\toks28
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.s
-ty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+(/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count282
+\multirow@cntb=\count270
 \multirow@dima=\skip59
-\bigstrutjot=\dimen193
+\bigstrutjot=\dimen189
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/carlisle\scalefnt.s
-ty)
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfigure\subfigure
-.sty
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
+(/usr/local/texlive/2020/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip60
 \subfigcapskip=\skip61
-\subfigcaptopadj=\dimen194
+\subfigcaptopadj=\dimen190
 \subfigbottomskip=\skip62
-\subfigcapmargin=\dimen195
+\subfigcapmargin=\dimen191
 \subfiglabelskip=\skip63
-\c@subfigure=\count283
-\c@lofdepth=\count284
-\c@subtable=\count285
-\c@lotdepth=\count286
+\c@subfigure=\count271
+\c@lofdepth=\count272
+\c@subtable=\count273
+\c@lotdepth=\count274
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfigure\subfigure
-.cfg)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip64
 \subfig@bottom=\skip65
 )
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\array.s
-ty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen196
-\ar@mcellbox=\box97
-\extrarowheight=\dimen197
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen192
+\ar@mcellbox=\box95
+\extrarowheight=\dimen193
 \NC@list=\toks29
 \extratabsurround=\skip66
 \backup@length=\skip67
-\ar@cellbox=\box98
+\ar@cellbox=\box96
 )
-\c@MYtempeqncnt=\count287
+\c@MYtempeqncnt=\count275
 
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
--pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count288
-\l__pdf_internal_box=\box99
-) (finalReport.aux)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count276
+\l__pdf_internal_box=\box97
+)
+(./finalReport.aux)
 \openout1 = `finalReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -399,127 +385,139 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 
 -- Lines per column: 58 (exact).
-
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
-f.mkii
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
-\scratchdimen=\dimen198
-\scratchbox=\box100
-\nofMPsegments=\count290
-\nofMParguments=\count291
+\scratchcounter=\count277
+\scratchdimen=\dimen194
+\scratchbox=\box98
+\nofMPsegments=\count278
+\nofMParguments=\count279
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count292
-\MPscratchDim=\dimen199
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen195
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
 \everyMPtoPDFconversion=\toks31
-)
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
-df-base.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\epstopdf-s
-ys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
+
+LaTeX Warning: Citation `9197465' on page 1 undefined on input line 20.
+
+
+LaTeX Warning: Citation `caspi10reinforcement' on page 1 undefined on input lin
+e 22.
+
+
+LaTeX Warning: Citation `brockman2016openai' on page 1 undefined on input line 
+22.
+
+
+LaTeX Warning: Citation `9197465' on page 1 undefined on input line 22.
+
+
+LaTeX Warning: Citation `schulman2017proximal' on page 1 undefined on input lin
+e 24.
+
+
+LaTeX Warning: Citation `7830823' on page 1 undefined on input line 26.
+
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 26
+.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 <training_track.png, id=1, 563.10374pt x 604.2575pt>
 File: training_track.png Graphic file (type png)
 <use training_track.png>
-Package pdftex.def Info: training_track.png  used on input line 46.
+Package pdftex.def Info: training_track.png  used on input line 44.
 (pdftex.def)             Requested size: 227.62204pt x 244.25272pt.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 53
-.
-
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
-
-
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
-
-
-(C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[1{C:/Users/kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 <AWS-simplifiedTrack.jpg, id=12, 829.0975pt x 597.23125pt>
 File: AWS-simplifiedTrack.jpg Graphic file (type jpg)
 <use AWS-simplifiedTrack.jpg>
-Package pdftex.def Info: AWS-simplifiedTrack.jpg  used on input line 74.
+Package pdftex.def Info: AWS-simplifiedTrack.jpg  used on input line 72.
 (pdftex.def)             Requested size: 227.62204pt x 163.96115pt.
 <freire-arch.jpg, id=13, 1059.96pt x 272.01625pt>
 File: freire-arch.jpg Graphic file (type jpg)
 <use freire-arch.jpg>
-Package pdftex.def Info: freire-arch.jpg  used on input line 90.
+Package pdftex.def Info: freire-arch.jpg  used on input line 88.
 (pdftex.def)             Requested size: 516.0pt x 132.42165pt.
- [2 <C:/Users/kevin/Documents/Masters/Reinforcement-Learning/Project/DeepRacer-
-Freire/report/training_track.png> <C:/Users/kevin/Documents/Masters/Reinforceme
-nt-Learning/Project/DeepRacer-Freire/report/AWS-simplifiedTrack.jpg>]
-<model-S.jpg, id=18, 317.185pt x 418.56375pt>
+ [2 <./training_track.png> <./AWS-simplifiedTrack.jpg>]
+<model-S.jpg, id=19, 317.185pt x 418.56375pt>
 File: model-S.jpg Graphic file (type jpg)
 <use model-S.jpg>
-Package pdftex.def Info: model-S.jpg  used on input line 104.
+Package pdftex.def Info: model-S.jpg  used on input line 102.
 (pdftex.def)             Requested size: 227.62204pt x 300.3821pt.
 
-Overfull \hbox (5.94942pt too wide) in paragraph at lines 142--142
+
+LaTeX Warning: Reference `hyper-parameters' on page 3 undefined on input line 1
+25.
+
+
+Overfull \hbox (5.94942pt too wide) in paragraph at lines 140--140
 []|\OT1/ptm/m/n/10 Categorical| 
  []
 
 
-Overfull \hbox (5.94942pt too wide) in paragraph at lines 142--143
+Overfull \hbox (5.94942pt too wide) in paragraph at lines 140--141
 []|\OT1/ptm/m/n/10 Categorical| 
  []
 
-[3 <C:/Users/kevin/Documents/Masters/Reinforcement-Learning/Project/DeepRacer-F
-reire/report/freire-arch.jpg> <C:/Users/kevin/Documents/Masters/Reinforcement-L
-earning/Project/DeepRacer-Freire/report/model-S.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[3 <./freire-arch.jpg> <./model-S.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 []|\OT1/ptm/m/n/10 Deep
  []
 
 
-Overfull \hbox (15.622pt too wide) in paragraph at lines 170--190
+Overfull \hbox (15.622pt too wide) in paragraph at lines 168--188
  [][] 
  []
 
 
-Overfull \hbox (4.74626pt too wide) in paragraph at lines 201--201
-[]|\OT1/ptm/m/n/10 Complete| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []|\OT1/ptm/m/n/10 Elapse
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []|\OT1/ptm/m/n/10 Off
  []
 
 
-Overfull \hbox (4.74626pt too wide) in paragraph at lines 201--201
-[]|\OT1/ptm/m/n/10 Complete| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []|\OT1/ptm/m/n/10 Elapse
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 []|\OT1/ptm/m/n/10 Off
+ []
+
+
+Overfull \hbox (11.54726pt too wide) in paragraph at lines 201--201
+[]|[]| 
  []
 
 
@@ -528,63 +526,74 @@ Overfull \hbox (11.54726pt too wide) in paragraph at lines 203--203
  []
 
 
-Overfull \hbox (11.54726pt too wide) in paragraph at lines 209--209
+Overfull \hbox (11.54726pt too wide) in paragraph at lines 205--205
 []|[]| 
- []
-
-
-Overfull \hbox (11.54726pt too wide) in paragraph at lines 215--215
-[]|[]| 
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 234--235
-\OT1/ptm/m/n/10 code we im-ple-mented. The github repo is avail-able at
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 234--235
-\OT1/ptm/m/n/10 https://github.com/aws/amazon-sagemaker-examples and we
  []
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+[]|\OT1/ptm/m/n/10 Elapse
+ []
 
-LaTeX Warning: Citation `9197465' on page 5 undefined on input line 238.
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+[]|\OT1/ptm/m/n/10 Off
+ []
 
 
-LaTeX Warning: Citation `caspi10reinforcement' on page 5 undefined on input lin
-e 240.
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+[]|\OT1/ptm/m/n/10 Elapse
+ []
 
-(finalReport.bbl) [5
 
-] (finalReport.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+[]|\OT1/ptm/m/n/10 Off
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 244--245
+\OT1/ptm/m/n/10 is avail-able on Github along with our mod-i-fi-ca-tion of
+ []
+
+No file finalReport.bbl.
+[5]
+<trainingTrack2.png, id=31, 322.20375pt x 409.53pt>
+File: trainingTrack2.png Graphic file (type png)
+<use trainingTrack2.png>
+Package pdftex.def Info: trainingTrack2.png  used on input line 259.
+(pdftex.def)             Requested size: 113.81102pt x 144.65616pt.
+<trainingTrack3.png, id=32, 399.4925pt x 518.93875pt>
+File: trainingTrack3.png Graphic file (type png)
+<use trainingTrack3.png>
+Package pdftex.def Info: trainingTrack3.png  used on input line 269.
+(pdftex.def)             Requested size: 113.81102pt x 147.83572pt.
+ [6
+
+ <./trainingTrack2.png> <./trainingTrack3.png>] (./finalReport.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3939 strings out of 479321
- 61208 string characters out of 2854639
- 386630 words of memory out of 3000000
- 21343 multiletter control sequences out of 15000+600000
- 439859 words of font info for 91 fonts, out of 8000000 for 9000
+ 3896 strings out of 480608
+ 58036 string characters out of 5903631
+ 314625 words of memory out of 5000000
+ 19725 multiletter control sequences out of 15000+600000
+ 572528 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,10n,74p,1498b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
-}<C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/kevin/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/kevin/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/kevin/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/kevin/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on finalReport.pdf (5 pages, 1955430 bytes).
+ 30i,10n,27p,1507b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on finalReport.pdf (6 pages, 2551675 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,26 +7,26 @@
 \usepackage{array}
 \newcounter{MYtempeqncnt}
 \begin{document}
-\title{Racing with Deep Reinforecment Learning}
+\title{Racing with Deep Reinforcement Learning}
 \author{Walter A. Freire, Kevin M. Freire\\
 andrei.freire@ryerson.ca, kfreirea@ryerson.ca\\
 Ryerson University, Toronto, Canada.}
 \maketitle
 \begin{abstract}
-The group members are Walter Freire and Kevin Freire and the project topic we will be working on is autonomous driving using deep reinforcement learning. The project uses the DeepRacer platform for simulation and training of a model. This article focuses on implementing a custom neural network architecture, with custom reward functions based on the parameters provided by DeepRacer.  
+Self driving vehicles have increased in popularity over the recent years and much research has been done in improving autonomous vehicles.  In this project we will be focusing on self driving race cars, using AWS resources and observe the effects of training models using a deep architecture and comparing it to a shallow architecture.  We will also look into the effects of tuning hyper parameters and the effect they have on training deep RL models.  This report shows the effect that deep network have on training an agent to complete a track as fast as possible.
 \end{abstract}
 
-\section{Intorduction}
-Reinforcement Learning (RL) has been used to accomplish various robotic tasks such as manipulation, navigation, flight, interaction, motion planning and many more. When implementing an RL model into the real world, due to its high sample complexity, safety requirements and cost it is common to train the RL agent in a simulation. In Autonomous driving, RL require many disciplines and equipment such as access to a physical robot/car with proper sensors, an accurate robot model for simulation to avoid damaging expensive hardware in initial development, a diverse training mechanism and custom modification of the training procedure such as modifying the neural network architecture and the loss function \cite{9197465}. For our experiment we used Deepracer as a guideline to implement and modify an existing jupyter notebook using AWS Sagemaker and Robomaker APIs.
+\section{Introduction}
+Reinforcement Learning (RL) has been used to accomplish various robotic tasks such as manipulation, navigation, flight, interaction, motion planning and many more. When implementing an RL model into the real world, due to its high sample complexity, safety requirements and cost it is common to train the RL agent in a simulation. In Autonomous driving, RL require many disciplines and equipment such as access to a physical robot/car with proper sensors, an accurate robot model for simulation to avoid damaging expensive hardware in initial development, a diverse training mechanism and custom modification of the training procedure such as modifying the neural network architecture and the loss function \cite{9197465}. For our experiment we used Deepracer as a guideline to implement and modify an existing Jupyter notebook using AWS Sagemaker and Robomaker APIs.
 
 We decided to get started with Deepracer because it supports state-of-the-art deep RL algorithms \cite{caspi10reinforcement}, simulations with OpenAI Gym interface \cite{brockman2016openai}, distributed rollouts and integration with cloud services. DeepRacer uses a 1/18th scale car of a physical robot that uses RL for navigation of a race track with a fisheye lens camera \cite{9197465} with other specs such as GPU, live streaming view and more. In this paper the robot model in DeepRacers simulation is used along with the multiple provided race tracks. With the provided sources the RL model policy is trained with different simulation parameters and multiple tracks in parallel using distributed rollouts.
 
 DeepRacer is a great platform for learning an end-to-end policy for navigating through a race track, that uses a single grayscale camera image as observation and discretized throttle/steering ad actions. The training is done in simulation using Proximal Policy Optimization (PPO) algorithm \cite{schulman2017proximal}, which can converge in under 5 minutes and about 5000 simulation steps. Deepracer provides an interactive experience in training a vehicle to drive itself through a race track with minimal supervision. We were mainly interested in the available jail-broken version in order to modify their source code to implement our own network architecture, customize the action-space, the reward functions and much more.  This is because Deepracer was very limited to what we can do and were restricted to their built in architectures. For this paper we implemented a simulation using AWS Robomaker and Training Deep reinforcement algorithm using The Sagemaker API to build a custom deep architecture and custom reward function in a built simulation environment built by AWS.  
 
-The purpose of selecting this project was to learn and understand the effect of training a vehicle with RL using deep neural networks with large datasets of videos that require high computational power using the Clipped PPO algorithm and customized reward function.  \cite{7830823} States that deeper networks reduce training time in self driving vehicles.  This is an observation we will attempt to capture in our project.  The rest of the report consists of the problem statement along with the environment we used, the custom deep architecture and reward function, the reinforcement algorithm, experiment setup , results, discussion of results.  Finally we will be showing code snippets in our appendix with custom code but the full implementation will be available on Github.
+The purpose of selecting this project was to learn and understand the effect of training a vehicle with RL using deep neural networks with large datasets of videos that require high computational power using the Clipped PPO algorithm and customized reward function.  \cite{7830823} States that deeper networks reduce training time in self driving vehicles.  This is an observation we will attempt to capture in our project.  The rest of the report consists of the problem statement along with the environment we used, the custom deep architecture and reward function, the reinforcement algorithm, experiment setup , results, discussion of results.  The full implementation will be available on Github \footnote{ Code available at https://github.com/wfrei020/DeepRacer-Freire}.
 
 
-\section{Problem Statement and Environement/Dataset}
+\section{Problem Statement and Environment/Dataset}
 The main objective of this problem is autonomous racing.  This problem requires the agent (car) to stay in the track and drive itself while completing the track as fast as possible.  This problem is divided into separate sections which include:
 
 \begin{enumerate}
@@ -106,7 +106,7 @@ The angles were chosen based on the maximum limits that amazon provides, the spe
 \label{car}
 \end{figure}
 
-\subsection{Reward Fcuntion}
+\subsection{Reward Function}
 The reward function that we used for all the tests are based on several considerations that affect what the returned reward.  The reward function that we used is in the appendix and below is a summary of how we implemented it to train our agent:
 
 \begin{enumerate}
@@ -192,53 +192,59 @@ Our main goal for this project was to identify the effect of training a self dri
 \begin{table*}[t]
 \centering
 \caption{Training comparison}
-\begin{tabular}{ |p{1cm}|p{1cm}|p{1.2cm}|p{1cm}|p{1cm}|p{1cm}|p{1.2cm}|p{1cm}|p{1cm}| }
+\begin{tabular}{ |p{1cm}|p{1.5cm}|p{1cm}|p{1.5cm}|p{1cm}| }
 \hline
- \multicolumn{1}{|c|}{} & \multicolumn{4}{|c|}{Deep Network} & \multicolumn{4}{|c|}{Shallow Network} \\
+ \multicolumn{1}{|c|}{Hours} & \multicolumn{2}{|c|}{Deep Network} & \multicolumn{2}{|c|}{Shallow Network} \\
 \hline
- & Trial &Complete & Elapse Time & Off Track &  Trial &Complete & Elapse Time & Off Track  \\
+ & Elapse Time (s) & Off Track &  Elapse Time (s) & Off Track  \\
 \hline
-\multirow{5}{4em}{1H} & 1 &  100\% & 54.995 & 1 & 1 &  100\% & 22.697 & 0 \\ 
-& 2 &  100\% & 51.508 & 1 & 2 &  100\% & 21.311 & 1  \\ 
-& 3 &  100\% & 56.982 & 2 & 3 &  100\% & 20.537 & 0  \\
-& 4 &  100\% & 59.805 & 3 & 4 &  100\% & 20.359 & 0  \\ 
-& 5 &  100\% & 53.618 & 3 & 5 &  100\% & 21.320 & 0  \\
+\multirow{1}{4em}{1} & 55.382 & 2 & 21.245 & 0 \\ 
  \hline
-\multirow{5}{4em}{4H} & 1 &  100\% & 14.799 & 2 & 1 &  100\% & 15.304 & 0 \\ 
-& 2 &  100\% & 16.017 & 4 & 2 &  100\% & 15.986 & 0  \\ 
-& 3 &  100\% & 15.167 & 2 & 3 &  100\% & 14.392 & 0  \\
-& 4 &  100\% & 14.060 & 2 & 4 &  100\% & 15.071 & 1  \\ 
-& 5 &  100\% & 15.125 & 3 & 5 &  100\% & 15.521 & 0  \\
+\multirow{1}{4em}{4} & 15.034& 3 & 15.255 & 0 \\ 
  \hline
-\multirow{5}{4em}{8H} & 1 &  100\% & 14.799 & 2 & 1 &  100\% & 15.304 & 0 \\ 
-& 2 &  100\% & 16.017 & 4 & 2 &  100\% & 15.986 & 0  \\ 
-& 3 &  100\% & 15.167 & 2 & 3 &  100\% & 14.392 & 0  \\
-& 4 &  100\% & 14.060 & 2 & 4 &  100\% & 15.071 & 1  \\ 
-& 5 &  100\% & 15.125 & 3 & 5 &  100\% & 15.521 & 0  \\
+\multirow{1}{4em}{8} & 14.385 & 2 & 13.545 & 0 \\ 
  \hline
 \end{tabular}
 \label{mainTest}
 \end{table*}
 
-Lookin at the results you can see that the 1 hour test for both cases took a long time to complete the track.  Our deep network took 50+ seconds to complete it while the shallow network only took 20+ seconds.  It is clear to see that when you only train for 1 hour a shallow network performs better.  So we proceeded to experiment again for 4 hours and observed that our initial objective was starting to show.  The deep and the shallow network have around the same time to complete the track.  This test demonstrates that in 4 hours a deeper network was able to achieve the same results as shallow.  The deeper network improved by 73\% with an additional 3 hours of training while the shallow network only improved by 28\%.  
+Looking at the results you can see that the 1 hour test for both cases took a long time to complete the track.  Our deep network took 50+ seconds to complete it while the shallow network only took 20+ seconds.  It is clear to see that when you only train for 1 hour a shallow network performs better.  So we proceeded to experiment again for 4 hours and observed that our initial objective was starting to show.  The deep and the shallow network have around the same time to complete the track.  This test demonstrates that in 4 hours a deeper network was able to achieve the same results as shallow.  The deeper network improved by 73\% with an additional 3 hours of training while the shallow network only improved by 28\%.  
 
 [need to add final results here]
 
-[Also add results of different race track here]
+Looking at the results in Table above we see that the deeper network tends to train faster and improve overall results of a self driving race car.  This has some conditions as you can see because a deep network does not perform as well with only 1 hour of training like the shallow architecture did.  As soon as the training time surpassed 4 hours of training that's when we saw that the deep architecture started surpassing performance of shallow networks.  Unfortunately from out result we saw that after 8 hours of training the shallow network did better on average by 0.84 seconds.  This brings up a lot of questions on why this deep network did not perform better than the shallow network.  It could be that the PPO algorithm does not require deep networks in tasks that involve speed.  Speed in this task is an essential component and if an agent needs a lot of time to make a decision due to its processing then a deep network may not have been the solution.  This is something we did not consider when we were implementing a self driving race car.  The processing time for each state may have affected the overall time it took to complete a racetrack.  A deeper network has more hidden states that it must process at every state, compared to a shallow network.  We understand now that deeper networks need more time to process more data and these task must not rely on speed to complete, it may be better to use shallow network, when it comes to tasks that involve quick decisions.
 
-Looking at the results in Table ADD REF we see that the deeper network tends to train faster and improve overall results of a self driving race car.  This has some conditions as you can see because a deep network does not perform as well with only 1 hour of training like the shallow architecture did.  As soon as the training time surpassed 4 hours of training that's when we saw that the deep architecture started surpassing performance of shallow networks.  
+As a final test we wanted to see the models trained on different tracks and observe their results.  We trained for 8 hours on the reinvent track and test it on its on two other tracks that look like figure [4]… in appendix.  You can see that our deep architecture did not do as good as the shallow network.  Noy only that but the agents went off track more in the deeper network.  As mentioned above this could be due to the fact that the deeper network needs longer processing time to make a decision which is a disadvantage in a speed task.
 
-[talk about different racetrack here]
+\begin{table*}[t]
+\centering
+\caption{Testing comparison Different Tracks}
+\begin{tabular}{ |p{3cm}|p{1.5cm}|p{1cm}|p{1.5cm}|p{1cm}| }
+\hline
+ \multicolumn{1}{|c|}{Track} & \multicolumn{2}{|c|}{Deep Network} & \multicolumn{2}{|c|}{Shallow Network} \\
+\hline
+ & Elapse Time (s) & Off Track &  Elapse Time (s) & Off Track  \\
+\hline
+\multirow{1}{8em}{Reinvent (trained)} & 14.385	 & 2 & 13.545	 & 0 \\ 
+ \hline
+\multirow{1}{8em}{Monaco(Complex)} & 47.283	 & 18 & 45.022	& 19 \\ 
+ \hline
+\multirow{1}{8em}{Oval(Simple)} & 14.233	 & 7 & 13.71 & 5 \\ 
+ \hline
+\end{tabular}
+\label{DiffRacetrackTest}
+\end{table*}
 
-This project has much research to continue on such as discovering what are the best hyper parameters for a deep network.  We also would like to identify what else is affected by deeper networks such as overfitting certain race tracks.  There are other tests we would've liked to implement such as the activation functions that we used in between all our layers.  We used ReLU but what would have happened if we used TANH or other functions?  Using deep networks is a popular solution to self driving cars but there are so many areas of improvement and fine tuning in order to obtain faster and better results.  We saw first hand the cost of just training these basic networks and the time we spent in figuring out the best models.
+
+This project has much research to continue on such as discovering what are the best hyper parameters for a deep network.  We also would like to identify what else is affected by deeper networks such as overfitting certain race tracks.  There are other tests we would've liked to implement such as the activation functions that we used in between all our layers.  We used ReLU but what would have happened if we used TANH or other functions?  Using deep networks is a popular solution to self driving cars but may not be a good solution for tasks that involve quick decisions.  There are so many areas to proceed in this task such as asking the question that even though a deep network did not do good in a race but how about an obstacle avoidance task.
 
 
 
 \section{Implementation and Code}
-As mentioned throughout the paper we used Amazons’s Sagemaker API and python’s python development environment.  Sagemaker Library used the RL Coach from Intel for the reinforcement learning Algorithms.  The code is available on github along with our modification of the code we implemented.  The github repo is available at \emph{https://github.com/wfrei020/DeepRacer-Freire}, please read the README file.  For the simulation, amazon used robomaker and we implemented it and ran using a GPU.  The original notebook provided by AWS for Deepracer was outdated and we spent a lot of effort and time upgrading it to the newest version.  The notebook was available at https://github.com/aws/amazon-sagemaker-examples and we upgraded it using the help of issue number 2055.  This helped us upgrade a lot of the packages.  Finally we also had to make the notebook compatible for CPPO.  THe notebook that AWS provided only worked for the SAC algorithm.  We really wanted to work with CPPO so we spent several days debugging and adding some code fix to allow the use of CPPO.  In the Appendix we have some important code we implemented for our project but we will not be including all the fixes throughout the API as it is too much and not important to the project. Finally in general we used AWS Dockers, Robomaker, Sagemaker ML libraries, and S3 bucket for storing our models. 
+As mentioned throughout the paper we used Amazons’s Sagemaker API and python’s python development environment.  Sagemaker Library used the RL Coach from Intel for the reinforcement learning Algorithms.  The code is available on Github along with our modification of the code we implemented.  The github repo is available at \emph{https://github.com/wfrei020/DeepRacer-Freire}, please read the README file.  For the simulation, amazon used robomaker and we implemented it and ran using a GPU.  The original notebook provided by AWS for Deepracer was outdated and we spent a lot of effort and time upgrading it to the newest version.  The notebook was available at https://github.com/aws/amazon-sagemaker-examples and we upgraded it using the help of issue number 2055.  This helped us upgrade a lot of the packages.  Finally we also had to make the notebook compatible for CPPO.  The notebook that AWS provided only worked for the SAC algorithm.  We really wanted to work with CPPO so we spent several days debugging and adding some code fix to allow the use of CPPO.  In the Appendix we have some important code we implemented for our project but we will not be including all the fixes throughout the API as it is too much and not important to the project. Finally in general we used AWS Dockers, Robomaker, Sagemaker ML libraries, and S3 bucket for storing our models. 
 
 \section{Conclusion}
-In conclusion we have shown the effect of training a deep network for self driving race cars.  The effect shows that deeper networks achieve faster results with less training.  This has some condition though because with training time of less than 1 hour shallow networks perform better.  Increased training time for more than 4 hours is when the deep networks start surpassing the shallow networks.  We also looked at some effects of tuning hyperparameters and saw that changing them a little bit had a big effect on overall results.  We hope to continue working on this since AWS provides monthly race competition around the world to test our models and see who implements the fastest self driving race car.
+In conclusion we have shown the effect of training a deep network for self driving race cars.  In our experiement we found out that deeper networks may have a disadvantage to race tasks or task that speed is the main condition.  We also looked at some effects of tuning hyperparameters and saw that changing them a little bit had a big effect on overall results.  We hope to continue working on this since AWS provides monthly race competition around the world to test our models and see who implements the fastest self driving race car.
 
 \bibliography{finalreport}
 \bibliographystyle{ieeetr}
@@ -247,53 +253,24 @@ In conclusion we have shown the effect of training a deep network for self drivi
 
 \section{Appendix}
 
-\subsection{RewardFunciton}
-import math\\
-def reward$\_$function(params):\\
-  \#Read input parameters\\
-    all$\_$wheels$\_$on$\_$track = params['all$\_$wheels$\_$on$\_$track']  \\
-    distance$\_$from$\_$center = params['distance$\_$from$\_$center']  \\
-    crashed = params['is$\_$crashed']  \\
-    progress = params['progress']  \\
-    offtrack = params['is$\_$offtrack']  \\
-    track$\_$width = params['track$\_$width'] \\
-    speed = params['speed'] \\
-    steps = params['steps'] \\
-    steering = params['steering$\_$angle']  \\
-    left$\_$of$\_$center = params['is$\_$left$\_$of$\_$center']  \\
+\subsection{Testing Race Tracks}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=4cm]{trainingTrack2}
+\end{center}
+\vspace{-2mm}
+\caption{Monaco Training Track}
+\label{monaco}
+\end{figure}
 
-  TOTAL$\_$NUM$\_$STEPS = 300\\
-    if crashed and offtrack:\\
-        reward = -1.0\\
-        return float(reward)\\
 
-\#If agent is on the left lane and all wheel are not on track and steering angle is to the left penalize\\
-    if not all$\_$wheels$\_$on$\_$track and left$\_$of$\_$center and steering $>$ 0:\\
-        reward = -1.0\\
-        return float(reward)\\
-    \# If agent is on the right lane and all wheel are onot on track and steering angle is to the right penalize\\
-    if not all$\_$wheels$\_$on$\_$track and not left$\_$of$\_$center and steering $<$ 0:\\
-        reward = -1.0\\
-        return float(reward)\\
-    		\# Give a very low reward by default\\
-    		reward = 1e-3\\
-    		
-\# give reward for proper steering\\
-    if not all$\_$wheels$\_$on$\_$track and left$\_$of$\_$center and steering $<$ 0:\\
-        reward += 2 * math.sin(math.radians(-steering))\\
-
-    if not all$\_$wheels$\_$on$\_$track and not left$\_$of$\_$center and steering $>$ 0:\\
-        reward += 2 * math.sin(math.radians(steering))\\
-\#Give a high reward if no wheels go off the track and\\
-\#the agent is somewhere in between the track borders\\
-    if all$\_$wheels$\_$on$\_$track and (0.5 * track$\_$width - distance$\_$from$\_$center) $\geq$ 0.05:\\
-        reward += 1.0\\
-        reward += 2**speed\\
-    else:\\
-        reward += 2**(speed**(1 / 2))\\
-
-if (steps\%100) == 0 and progress $>$ (steps/TOTAL$\_$NUM$\_$STEPS)*100:\\
-        reward += 10.0\\
-    return float(reward)\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=4cm]{trainingTrack3}
+\end{center}
+\vspace{-2mm}
+\caption{Oval Training Track}
+\label{oval}
+\end{figure}
 
 \end{document}
