@@ -1,48 +1,35 @@
-# DeepRacer notebook using Amazon SageMaker RL and AWS RoboMaker services
+# Reinforcement Learning Project
 
-This folder contains examples of how to use RL to train an autonomous deepracer. This is a jailbreaker for the AWS DeepRacer. This gives a glimse of architecture used to get the DeepRacer working.
+## Self Driving autonomous Race car
+
+This source code was taken and intensilve modified from AWS jain broken version.  Please Read ./DEFAULT_INFO.md to get default infomration about this code.
+
+This readme file is to showcase some of the modifcations we did to get our project going and running.
+
+modified directories 
+
+custom rewards function can be found in 
+
+    ./src/artifacts/rewards/andrei_reward_optimized_turns.py
+    
+custom action space config can be found in
+    
+    ./src/artifacts/actions/freire_continous_custom_architecture.json
+    
+custom architecture code lines 80-89 (called DEEP_CONVOLUTIONAL_NETWORK_FREIRE)
+    
+    ./src/markov/sensors/utils.py
+    
+## The main notebook instance we ran was
+
+    ./deepracer_rl.ipynb 
+    
+This notebook contained all our setup and code to get our project running.  Most of it was mofied based on existing AWS code.
 
 
-## Contents
 
-* `deepracer_rl.ipynb`: notebook for training autonomous race car.
+Finally, this source code had to be heavily modifed for it to work with our requirements.  This included capabilites to execute PPO Continuos algorithm becase this code only allowed SAC (please see issue #2055 in https://github.com/aws/amazon-sagemaker-examples/tree/master/reinforcement_learning/rl_deepracer_robomaker_coach_gazebo).
 
-* `Dockerfile`: Custom docker instead of using SageMaker default docker
+we customized the ./src/markov/ directory to build to allow the use of our own architecture for research purpose. 
 
-* `src/`
-  * `training_worker.py`: Main entrypoint for starting distributed training job
-  * `markov/`: Helper files for S3 upload/download
-   * `presets/default.py`: Preset (configuration) for DeepRacer
-   * `rewards/default.py`: Custom reward function
-   * `environments/deepracer_racetrack_env.py`: Gym environment file for DeepRacer
-   * `actions/model_metadata_10_state.json`: JSON file to customize your action space & the speed
-  * `lib/`: redis configuration file and ppo_head.py customized tensorflow file copied to sagemaker container.
-
-* `common/`: helper function to build docker files.
-
-## How to use the notebook
-
-1. Login to your AWS account - SageMaker service ([SageMaker Link](https://us-west-2.console.aws.amazon.com/sagemaker/home?region=us-west-2#/dashboard))
-2. On the left tab select `Notebook instances`
-3. Select `Create notebook instance`
-4. Fill up the notebook instance name. In the Additional configuration select atleast 25GB. This is because docker gets installed and takes up space.
-5. Create a new IAM role. Give root permission
-6. Select the git repository and clone this repository.
-7. Then click create notebook instance button at the button
-8. This takes like 2 min to create your notebook instance. Then click on the newly created instance and click on the juypter notebook.
-9. You will see all the github files and now run `deepracer_rl.ipynb`
-10. Run clean robomaker & sagemaker commands in the script only when you are done with training.
-
-## DeepRacer Paper
-
-A techncial paper for AWS DeepRacer is available at https://arxiv.org/abs/1911.01562. Below is a BibTeX entry for citations:
-```
-@misc{deepracer2019,  
-	title={DeepRacer: Educational Autonomous Racing Platform for Experimentation with Sim2Real Reinforcement Learning},
-	author={Bharathan Balaji and Sunil Mallya and Sahika Genc and Saurabh Gupta and Leo Dirac and Vineet Khare and Gourav Roy and Tao Sun and Yunzhe Tao and Brian Townsend and Eddie Calleja and Sunil Muralidhara and Dhanasekar Karuppasamy},
-	year={2019},  
-	eprint={1911.01562},  
-	archivePrefix={arXiv},  
-	primaryClass={cs.LG}  
-}
-```
+Thansk to AWS we were able to complete such a large project in such a short time!
