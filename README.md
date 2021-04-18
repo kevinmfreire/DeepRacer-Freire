@@ -7,6 +7,12 @@ This source code was taken and intensilve modified from AWS jail broken version.
 
 This README file is to showcase some of the modifcations we did to get our project going and running.
 
+## The main notebook instance we ran was
+
+    ./deepracer_rl.ipynb
+
+This notebook contained all our setup and code to get our project running.  Most of it was mofied based on existing AWS code.
+
 modified directories
 
 custom rewards function can be found in
@@ -20,12 +26,6 @@ custom action space config can be found in
 custom architecture code lines 80-89 (called DEEP_CONVOLUTIONAL_NETWORK_FREIRE)
 
     ./src/markov/sensors/utils.py
-
-## The main notebook instance we ran was
-
-    ./deepracer_rl.ipynb
-
-This notebook contained all our setup and code to get our project running.  Most of it was mofied based on existing AWS code.
 
 
 
