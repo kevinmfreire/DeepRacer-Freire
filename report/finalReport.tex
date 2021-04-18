@@ -122,7 +122,7 @@ The reward function that we used for all the tests are based on several consider
 Proximal Policy optimization (PPO) is currently a standard use in self driving vehicles.  AWS provided two algorithms: the Soft Actor Critic (SAC) algorithm and Clipped PPO algorithm.  We decided to go with CPPO because we wanted to use an algorithm that's popular in self driving vehicles, and for its on-policy learning algorithm which is done by PPO.  On-policy algorithms tend to be more stable and exploit exploration which is why we decided to train it using the Clipped PPO algorithm.  We did not do any modification to the algorithm but rather just used the API which was implemented by Intel RL Coach framework used within AWS Sagemaker.
 
 \subsection{Hyperparameters}
-As mentioned above we did not want to focus on fine tuning the model because it was too costly using AWS resources. We focus on two sets of hyper parameters for our tests in order to observe which is better.  Shown in Table \ref{hyper-parameters} are the hyper parameters used for the experiments.
+As mentioned above we did not want to focus on fine tuning the model because it was too costly using AWS resources. We focus on two sets of hyper parameters for our tests in order to observe which is better.  Shown in Table \ref{Hyperparameters} are the hyper parameters used for the experiments.
 
 \begin{table}
 \centering
