@@ -27,6 +27,13 @@ custom architecture code lines 80-89 (called DEEP_CONVOLUTIONAL_NETWORK_FREIRE)
 
     ./src/markov/sensors/utils.py
 
+final latex report files can be found in
+
+    ./report
+
+Videos of a sample training and testing session can be found in
+
+    ./videos
 
 
 Finally, this source code had to be heavily modifed for it to work with our requirements.  This included capabilites to execute PPO Continuos algorithm becase the default code only allowed SAC (please see issue #2055 in https://github.com/aws/amazon-sagemaker-examples/tree/master/reinforcement_learning/rl_deepracer_robomaker_coach_gazebo).
@@ -36,10 +43,9 @@ we customized the ./src/markov/ directory build to allow the use of our own arch
 Thanks to AWS we were able to complete such a large project in such a short time!
 
 ## Model
+Our models were too big in size to submit over 3 GB and we could not upload it to our github repo because github has size restriction.  If you want to see our model email us and we can try to give you access to our S3 bucket to download.
+We used AWS S3 data storage buckets to store our data and fetch it because keeping a notebook running for months was so expensive that this was our only option.
 
-In the directory
-    ./models
-We added our latest model that we trained for 8 hours.  We used S3 buckets to store our data and fetch it because keeping a notebook running for months was so expensive that this was our only option.
 Trying to run this notebook will fail unless you configure it to match your AWS account.  If you wish to run this please message developers
 
 
